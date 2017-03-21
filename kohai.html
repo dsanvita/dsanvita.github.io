@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>kohai</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript">
+
+window.addEventListener('load', function() {
+	var hash = (window.location.hash || '').substr(1);
+	hash.split('&').forEach(function(part) {
+		var item = part.split('=');
+		if (item[0] === 'state') {
+			window.location = decodeURIComponent(item[1]) + encodeURIComponent(hash);
+		}
+	});
+});
+
+</script>
+</head>
+<body>kohai</body>
+</html>
